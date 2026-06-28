@@ -8,7 +8,9 @@ async function getWeather() {
   const res = await fetch(url);
 
   const data = await res.json();
-
+  
+  console.log(data);
+  
   document.getElementById("location").innerHTML = data.name;
 
   document.getElementById("temp").innerHTML = Math.round(data.main.temp) + "°C";
